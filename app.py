@@ -25,7 +25,7 @@ if 'time_up' not in st.session_state:
 
 # Team credentials
 TEAM_CREDENTIALS = {
-    "SUNDAR": {"password": "sundar123", "cards": [
+    "Team 1": {"password": "team1", "cards": [
         {"trait": "Strategic", "riddle": "I look ahead, beyond today,\nTo plan and pave a smarter way.\nVision is key, I plot with grace,\nWhat am I in this CEO race?", "answer": "Strategic", "location": "Location 1"},
         {"trait": "Understanding", "riddle": "I listen close, I care, I feel,\nI value thoughts that others reveal.\nThrough empathy, I lead with might,\nWhat makes my leadership so right?", "answer": "Understanding", "location": "Location 2"},
         {"trait": "Nimble", "riddle": "In a tech world changing every hour,\nI shift with speed and mental power.\nI don't stay stuck, I swiftly act,\nWhat trait helps keep my plans intact?", "answer": "Nimble", "location": "Location 3"},
@@ -33,14 +33,14 @@ TEAM_CREDENTIALS = {
         {"trait": "Analytical", "riddle": "Data, numbers, charts and lines,\nI read the clues and spot the signs.\nMy brain breaks down the complex things,\nWhat skill is key to what success brings?", "answer": "Analytical", "location": "Location 5"},
         {"trait": "Resilient", "riddle": "I rise when failures bring me down,\nI fight again without a frown.\nThrough thick and thin, I never bend,\nWhat trait helps me transcend?", "answer": "Resilient", "location": "Location 6"}
     ]},
-    "SATYA": {"password": "satya123", "cards": [
+    "Team 2": {"password": "team2", "cards": [
         {"trait": "Strategic", "riddle": "I look ahead, beyond today,\nTo plan and pave a smarter way.\nVision is key, I plot with grace,\nWhat am I in this CEO race?", "answer": "Strategic", "location": "Location 1"},
         {"trait": "Adaptive", "riddle": "The world may shift, the tech may change,\nBut I adjust within that range.\nI flex, I flow, I find my way,\nWhat trait helps me win the day?", "answer": "Adaptive", "location": "Location 2"},
         {"trait": "Thoughtful", "riddle": "I care before I speak or do,\nI think of others' point of view.\nWith gentle strength, I lead the way,\nWhat's this trait I show each day?", "answer": "Thoughtful", "location": "Location 3"},
         {"trait": "Youthful", "riddle": "Though age may rise, I still embrace,\nNew ways, bold dreams, a forward pace.\nWith energy and open mind,\nWhat trait helps me stay aligned?", "answer": "Youthful", "location": "Location 4"},
         {"trait": "Authentic", "riddle": "I stay true to who I am,\nI don't pretend or give a sham.\nWith honesty and steady tone,\nWhat makes my voice my own?", "answer": "Authentic", "location": "Location 5"}
     ]},
-    "NAMITA": {"password": "namita123", "cards": [
+    "Team 3": {"password": "team3", "cards": [
         {"trait": "Nurturing", "riddle": "I guide with warmth and help them grow,\nI cheer the highs and help the lows.\nI mentor, coach, and always care —\nWhat trait shows I'm always there?", "answer": "Nurturing", "location": "Location 1"},
         {"trait": "Assertive", "riddle": "I speak my mind, I'm bold and clear,\nI chase the truth, I have no fear.\nMy tone is strong, my stance is fair —\nWhat trait shows I truly care?", "answer": "Assertive", "location": "Location 2"},
         {"trait": "Motivational", "riddle": "With words and will, I lift the team,\nI fuel their fire, I boost their dream.\nA cheer, a push, a hopeful view —\nWhat trait helps them follow through?", "answer": "Motivational", "location": "Location 3"},
@@ -48,7 +48,7 @@ TEAM_CREDENTIALS = {
         {"trait": "Transparent", "riddle": "No hidden games, no sugarcoat,\nI speak the truth, I take the vote.\nWith honesty, I lead the lane —\nWhat trait helps me stay so plain?", "answer": "Transparent", "location": "Location 5"},
         {"trait": "Ambitious", "riddle": "I dream big, I aim so high,\nI won't stop till I touch the sky.\nGoals are more than what they seem —\nWhat trait defines my burning dream?", "answer": "Ambitious", "location": "Location 6"}
     ]},
-    "LEENA": {"password": "leena123", "cards": [
+    "Team 4": {"password": "team4", "cards": [
         {"trait": "Leadership", "riddle": "I lead the way, I clear the fog,\nI steer the ship through any slog.\nWith vision wide and actions neat,\nWhat trait helps me guide my fleet?", "answer": "Leadership", "location": "Location 1"},
         {"trait": "Empathy", "riddle": "Your pain, your joy, I understand,\nI help you up, I hold your hand.\nI see your side and walk your way,\nWhat's this trait that makes my day?", "answer": "Empathy", "location": "Location 2"},
         {"trait": "Ethical", "riddle": "Right or wrong, I choose the right,\nI never hide, I walk in light.\nMy code is strong, I never fall —\nWhat trait defines my moral call?", "answer": "Ethical", "location": "Location 3"},
@@ -64,7 +64,7 @@ ADMIN_PASSWORD = "admin123"
 def login_page():
     st.title("Treasure Hunt Login")
     
-    team_name = st.selectbox("Select your team", ["SUNDAR", "SATYA", "NAMITA", "LEENA"])
+    team_name = st.selectbox("Select your team", ["Team 1", "Team 2", "Team 3", "Team 4"])
     password = st.text_input("Enter team password", type="password")
     
     if st.button("Login"):
