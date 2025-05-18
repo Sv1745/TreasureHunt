@@ -64,7 +64,7 @@ ADMIN_PASSWORD = "admin123"
 def login_page():
     st.title("Treasure Hunt Login")
     
-    team_name = st.selectbox("Select your team", ["Team 1", "Team 2", "Team 3", "Team 4"])
+    team_name = st.selectbox("Select your team", ["Krishna", "Brahmaputra", "Ganga", "Tungabhadra"])
     password = st.text_input("Enter team password", type="password")
     
     if st.button("Login"):
