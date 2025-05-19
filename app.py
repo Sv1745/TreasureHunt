@@ -23,39 +23,39 @@ if 'previous_answers' not in st.session_state:
 if 'time_up' not in st.session_state:
     st.session_state.time_up = False
 
-# Team credentials
 TEAM_CREDENTIALS = {
     "Krishna": {"password": "team1", "cards": [
-        {"trait": "Strategic", "riddle": "I look ahead, beyond today,\nTo plan and pave a smarter way.\nVision is key, I plot with grace,\nWhat am I in this CEO race?", "answer": "Strategic", "location": "Location 1"},
-        {"trait": "Understanding", "riddle": "I listen close, I care, I feel,\nI value thoughts that others reveal.\nThrough empathy, I lead with might,\nWhat makes my leadership so right?", "answer": "Understanding", "location": "Location 2"},
-        {"trait": "Nimble", "riddle": "In a tech world changing every hour,\nI shift with speed and mental power.\nI don't stay stuck, I swiftly act,\nWhat trait helps keep my plans intact?", "answer": "Nimble", "location": "Location 3"},
-        {"trait": "Decisive", "riddle": "In moments when the stakes are high,\nI choose the best without a sigh.\nI don't delay or second guess,\nWhat trait helps me face the stress?", "answer": "Decisive", "location": "Location 4"},
-        {"trait": "Analytical", "riddle": "Data, numbers, charts and lines,\nI read the clues and spot the signs.\nMy brain breaks down the complex things,\nWhat skill is key to what success brings?", "answer": "Analytical", "location": "Location 5"},
-        {"trait": "Resilient", "riddle": "I rise when failures bring me down,\nI fight again without a frown.\nThrough thick and thin, I never bend,\nWhat trait helps me transcend?", "answer": "Resilient", "location": "Location 6"}
+        {"trait": "Strategic", "riddle": "I look ahead, beyond today,\nTo plan and pave a smarter way.\nVision is key, I plot with grace,\nWhat am I in this CEO race?", "answer": "Strategic", "location": "Double door Room 178 window"},
+        {"trait": "Understanding", "riddle": "I listen close, I care, I feel,\nI value thoughts that others reveal.\nThrough empathy, I lead with might,\nWhat makes my leadership so right?", "answer": "Understanding", "location": "Powerbox near 1st floor D block lift"},
+        {"trait": "Nimble", "riddle": "In a tech world changing every hour,\nI shift with speed and mental power.\nI don't stay stuck, I swiftly act,\nWhat trait helps keep my plans intact?", "answer": "Nimble", "location": "Mechanical Notice board"},
+        {"trait": "Decisive", "riddle": "In moments when the stakes are high,\nI choose the best without a sigh.\nI don't delay or second guess,\nWhat trait helps me face the stress?", "answer": "Decisive", "location": "1st floor, Near Room 189 balcony door"},
+        {"trait": "Analytical", "riddle": "Data, numbers, charts and lines,\nI read the clues and spot the signs.\nMy brain breaks down the complex things,\nWhat skill is key to what success brings?", "answer": "Analytical", "location": "1st floor downside of stairs near room 184"},
+        {"trait": "Resilient", "riddle": "I rise when failures bring me down,\nI fight again without a frown.\nThrough thick and thin, I never bend,\nWhat trait helps me transcend?", "answer": "Resilient", "location": "Come back to class room"}
     ]},
     "Brahmaputra": {"password": "team2", "cards": [
-        {"trait": "Strategic", "riddle": "I look ahead, beyond today,\nTo plan and pave a smarter way.\nVision is key, I plot with grace,\nWhat am I in this CEO race?", "answer": "Strategic", "location": "Location 1"},
-        {"trait": "Adaptive", "riddle": "The world may shift, the tech may change,\nBut I adjust within that range.\nI flex, I flow, I find my way,\nWhat trait helps me win the day?", "answer": "Adaptive", "location": "Location 2"},
-        {"trait": "Thoughtful", "riddle": "I care before I speak or do,\nI think of others' point of view.\nWith gentle strength, I lead the way,\nWhat's this trait I show each day?", "answer": "Thoughtful", "location": "Location 3"},
-        {"trait": "Youthful", "riddle": "Though age may rise, I still embrace,\nNew ways, bold dreams, a forward pace.\nWith energy and open mind,\nWhat trait helps me stay aligned?", "answer": "Youthful", "location": "Location 4"},
-        {"trait": "Authentic", "riddle": "I stay true to who I am,\nI don't pretend or give a sham.\nWith honesty and steady tone,\nWhat makes my voice my own?", "answer": "Authentic", "location": "Location 5"}
+        {"trait": "Strategic", "riddle": "I look ahead, beyond today,\nTo plan and pave a smarter way.\nVision is key, I plot with grace,\nWhat am I in this CEO race?", "answer": "Strategic", "location": "Oppposite to 183, MCB"},
+        {"trait": "Adaptive", "riddle": "The world may shift, the tech may change,\nBut I adjust within that range.\nI flex, I flow, I find my way,\nWhat trait helps me win the day?", "answer": "Adaptive", "location": "Front of HOD office"},
+        {"trait": "Thoughtful", "riddle": "I care before I speak or do,\nI think of others' point of view.\nWith gentle strength, I lead the way,\nWhat's this trait I show each day?", "answer": "Thoughtful", "location": "Dustbin near 145"},
+        {"trait": "Youthful", "riddle": "Though age may rise, I still embrace,\nNew ways, bold dreams, a forward pace.\nWith energy and open mind,\nWhat trait helps me stay aligned?", "answer": "Youthful", "location": "189"},
+        {"trait": "Authentic", "riddle": "I stay true to who I am,\nI don't pretend or give a sham.\nWith honesty and steady tone,\nWhat makes my voice my own?", "answer": "Authentic", "location": "Come back to class room"}
     ]},
     "Ganga": {"password": "team3", "cards": [
-        {"trait": "Nurturing", "riddle": "I guide with warmth and help them grow,\nI cheer the highs and help the lows.\nI mentor, coach, and always care —\nWhat trait shows I'm always there?", "answer": "Nurturing", "location": "Location 1"},
-        {"trait": "Assertive", "riddle": "I speak my mind, I'm bold and clear,\nI chase the truth, I have no fear.\nMy tone is strong, my stance is fair —\nWhat trait shows I truly care?", "answer": "Assertive", "location": "Location 2"},
-        {"trait": "Motivational", "riddle": "With words and will, I lift the team,\nI fuel their fire, I boost their dream.\nA cheer, a push, a hopeful view —\nWhat trait helps them follow through?", "answer": "Motivational", "location": "Location 3"},
-        {"trait": "Intelligent", "riddle": "Ideas spark and numbers fly,\nI solve with reason, not just try.\nLogic, facts, and insight too —\nWhat trait defines my point of view?", "answer": "Intelligent", "location": "Location 4"},
-        {"trait": "Transparent", "riddle": "No hidden games, no sugarcoat,\nI speak the truth, I take the vote.\nWith honesty, I lead the lane —\nWhat trait helps me stay so plain?", "answer": "Transparent", "location": "Location 5"},
-        {"trait": "Ambitious", "riddle": "I dream big, I aim so high,\nI won't stop till I touch the sky.\nGoals are more than what they seem —\nWhat trait defines my burning dream?", "answer": "Ambitious", "location": "Location 6"}
+        {"trait": "Nurturing", "riddle": "I guide with warmth and help them grow,\nI cheer the highs and help the lows.\nI mentor, coach, and always care —\nWhat trait shows I'm always there?", "answer": "Nurturing", "location": "Room 185"},
+        {"trait": "Assertive", "riddle": "I speak my mind, I'm bold and clear,\nI chase the truth, I have no fear.\nMy tone is strong, my stance is fair —\nWhat trait shows I truly care?", "answer": "Assertive", "location": "1st Floor, Fir Hydrant Stairs"},
+        {"trait": "Motivational", "riddle": "With words and will, I lift the team,\nI fuel their fire, I boost their dream.\nA cheer, a push, a hopeful view —\nWhat trait helps them follow through?", "answer": "Motivational", "location": "Staff Punching machine, Ground Floor D Block"},
+        {"trait": "Intelligent", "riddle": "Ideas spark and numbers fly,\nI solve with reason, not just try.\nLogic, facts, and insight too —\nWhat trait defines my point of view?", "answer": "Intelligent", "location": "Back Gate"},
+        {"trait": "Transparent", "riddle": "No hidden games, no sugarcoat,\nI speak the truth, I take the vote.\nWith honesty, I lead the lane —\nWhat trait helps me stay so plain?", "answer": "Transparent", "location": "Room 177"},
+        {"trait": "Ambitious", "riddle": "I dream big, I aim so high,\nI won't stop till I touch the sky.\nGoals are more than what they seem —\nWhat trait defines my burning dream?", "answer": "Ambitious", "location": "Come back to class room"}
     ]},
     "Tungabhadra": {"password": "team4", "cards": [
-        {"trait": "Leadership", "riddle": "I lead the way, I clear the fog,\nI steer the ship through any slog.\nWith vision wide and actions neat,\nWhat trait helps me guide my fleet?", "answer": "Leadership", "location": "Location 1"},
-        {"trait": "Empathy", "riddle": "Your pain, your joy, I understand,\nI help you up, I hold your hand.\nI see your side and walk your way,\nWhat's this trait that makes my day?", "answer": "Empathy", "location": "Location 2"},
-        {"trait": "Ethical", "riddle": "Right or wrong, I choose the right,\nI never hide, I walk in light.\nMy code is strong, I never fall —\nWhat trait defines my moral call?", "answer": "Ethical", "location": "Location 3"},
-        {"trait": "Non-judgmental", "riddle": "I accept all paths, all points of view,\nI let you be just you, not new.\nI welcome thoughts, both big and small,\nWhat trait helps me hear them all?", "answer": "Non-judgmental", "location": "Location 4"},
-        {"trait": "Authentic", "riddle": "I'm myself — not fake, not dressed,\nI speak my truth, I show my best.\nNo mask, no filter, just my core —\nWhat trait helps me lead and soar?", "answer": "Authentic", "location": "Location 5"}
+        {"trait": "Leadership", "riddle": "I lead the way, I clear the fog,\nI steer the ship through any slog.\nWith vision wide and actions neat,\nWhat trait helps me guide my fleet?", "answer": "Leadership", "location": "D Block, 1st Floor, Opposite to Lift"},
+        {"trait": "Empathy", "riddle": "Your pain, your joy, I understand,\nI help you up, I hold your hand.\nI see your side and walk your way,\nWhat's this trait that makes my day?", "answer": "Empathy", "location": "First Year Block, Coconut tree"},
+        {"trait": "Ethical", "riddle": "Right or wrong, I choose the right,\nI never hide, I walk in light.\nMy code is strong, I never fall —\nWhat trait defines my moral call?", "answer": "Ethical", "location": "Near Polytechnic block (Dr NR Shetty House)"},
+        {"trait": "Non-judgmental", "riddle": "I accept all paths, all points of view,\nI let you be just you, not new.\nI welcome thoughts, both big and small,\nWhat trait helps me hear them all?", "answer": "Non-judgmental", "location": "189 Classroom"},
+        {"trait": "Authentic", "riddle": "I'm myself — not fake, not dressed,\nI speak my truth, I show my best.\nNo mask, no filter, just my core —\nWhat trait helps me lead and soar?", "answer": "Authentic", "location": "Come back to class room"}
     ]}
 }
+
 
 # Admin credentials
 ADMIN_USERNAME = "admin"
@@ -135,7 +135,7 @@ def game_page():
         st.write("Riddle:")
         st.markdown(f"""
         <div style='background-color: #2b2b2b; color: #ffffff; padding: 20px; border-radius: 10px; margin: 10px 0; font-size: 1.1em; line-height: 1.6; box-shadow: 0 2px 4px rgba(0,0,0,0.1);'>
-            {card['riddle']}
+            {card['riddle'][:15]+ "..."}
         </div>
         """, unsafe_allow_html=True)
         
